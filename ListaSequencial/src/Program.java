@@ -3,6 +3,7 @@ public class Program {
         ListaSequencial lista = new ListaSequencial();
 
 
+        System.out.println("Iniciando lista");
         lista.iniciarLista(5);
         lista.inserir(6);
         lista.inserir(7);
@@ -14,14 +15,17 @@ public class Program {
         lista.inserir(9);
         lista.inserir(10);
         lista.imprimir();
-       // lista.empurrar(2);
-       // lista.imprimir();
-        //lista.puxar(6);
-        //lista.imprimir();
-       lista.inserirNoComeco(3);
-        //lista.imprimir();
-       //lista.inserirNoFinal(7);
-       lista.imprimir();
+        System.out.println("Inserindo no começo");
+        lista.inserirNoComeco(3);
+        lista.imprimir();
+        System.out.println("inserindo no final");
+        lista.inserirNoFinal(7);
+        lista.imprimir();
+        System.out.println("Buscando elemento");
+        lista.buscarElemento(6);
+        System.out.println("Eliminando elemento");
+        lista.eliminarElemento(3);
+        lista.imprimir();
 
     }
 }
