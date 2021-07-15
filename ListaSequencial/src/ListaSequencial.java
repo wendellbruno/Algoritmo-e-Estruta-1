@@ -14,32 +14,37 @@ public class ListaSequencial {
         this.lista = new int[10];
     }
 
-    public void iniciarLista(int numero){
+    public void iniciarLista(int numero) {
         lista[0] = numero;
         posicaoInicial++;
         posicaoFinal++;
-        lista[1] = posicaoFinal;
+        //lista[0] = posicaoFinal;
     }
 
-    public void inserir(int numero){
+    public void inserir(int numero) {
         posicaoFinal++;
         lista[posicaoFinal] = numero;
-     }
+    }
 
-     public void inserirNoComeco(int numero) {
-
+    public void inserirNoComeco(int numero) {
+        if (lista[posicaoInicial] != 0) {
+            int aux = lista[posicaoFinal];
+            if(posicaoFinal < 9){
+                posicaoFinal++;
+            }
+            lista[posicaoFinal] = aux;
+        }
+         if(lista[posicaoFinal] != 0){
          for (int i = posicaoFinal; i <= lista.length; i--) {
-                /* if(lista[posicaoFinal] != 0){
-                     posicaoFinal++;
-                     lista[posicaoFinal] = lista[i];
-                 }*/
-                    lista[i] = lista[i - 1];
-                 if(lista[i] == lista[posicaoInicial]){
-                     lista[posicaoInicial] = numero;
-                     break;
+            lista[i] = lista[i - 1];
+             if(lista[i] == lista[posicaoInicial]){
+                 lista[posicaoInicial] = numero;
+                 break;
                  }
              }
          }
+    }
+
      public void inserirNoFinal(int numero){
          for (int i = posicaoInicial; i <= lista.length ; i++) {
              lista[i] = lista[i+1];

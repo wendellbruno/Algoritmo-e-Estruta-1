@@ -11,8 +11,8 @@ public class Program {
         lista.inserir(1);
         lista.inserir(4);
         lista.inserir(8);
-        //lista.inserir(9);
-        //lista.inserir(10);
+        lista.inserir(9);
+        lista.inserir(10);
         lista.imprimir();
        // lista.empurrar(2);
        // lista.imprimir();
